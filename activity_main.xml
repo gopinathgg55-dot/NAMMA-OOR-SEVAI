@@ -1,123 +1,283 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#F5F9FC"
-    android:padding="16dp">
+    android:background="#F5F9FC">
 
-    <!-- Top Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#0288D1"
-        android:padding="14dp"
-        android:gravity="center_vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <TextView
-            android:layout_width="0dp"
+        <!-- Top Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="🔵 நம்ம ஊர் சேவை"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal"
+            android:background="#0288D1"
+            android:padding="14dp"
+            android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/tvLocation"
-            android:layout_width="wrap_content"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔵 நம்ம ஊர் சேவை"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Search Box -->
+        <EditText
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="📍 குடியாத்தம்"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:background="#FFFFFF"
+            android:hint="🔍 உங்களுக்கு என்ன சேவை வேண்டும்?"
+            android:padding="14dp"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <!-- Section Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="📂 அனைத்துத் தொழில்கள் &amp; சேவைகள்"
+            android:textColor="#0288D1"
+            android:textSize="16sp"
             android:textStyle="bold" />
+
+        <!-- Row 1: Loom / Weaving Workers -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLoomWorkers"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🧵\nதறி ஓட்டுபவர்கள் / தறித் தொழிலாளர்கள்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 2: Marriage Hall & Iyer -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMarriageHall"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🏛️\nதிருமண மண்டபம்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnIyer"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🛕\nஐயர் / புரோகிதர்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 3: Marriage Brokers & Band/Melam -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMarriageBrokers"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🤝\nகல்யாண தரகர்கள்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnMelam"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🎵\nமேளம் வாத்தியம்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 4: Cooking & Tree Climbing -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCooking"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🍲\nசமையல் சேவைகள்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnTreeClimbing"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🌴\nமரம் ஏறும் தொழில்கள்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 5: Electrical & Construction -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnElectrical"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="⚡\nமின்சாரம் &amp; பிளம்பிங்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnConstruction"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🧱\nகட்டிட வேலைகள்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 6: Mechanic & Driver -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnMechanic"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🔧\nமெக்கானிக்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnDriver"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🚗\nவாகன ஓட்டுநர்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 7: Agriculture & Painting -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAgriculture"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🚜\nவிவசாய வேலைகள்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnPainting"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="#FFFFFF"
+                android:text="🎨\nபெயிண்டிங்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Row 8: Emergency Services -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEmergency"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFFFFF"
+                android:text="🏥\nமருத்துவம் &amp; அவசரம்"
+                android:textColor="#0288D1"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
-
-    <!-- Search Box -->
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#FFFFFF"
-        android:hint="🔍 உங்களுக்கு என்ன சேவை வேண்டும்?"
-        android:padding="14dp"
-        android:textColor="#333333"
-        android:textSize="14sp" />
-
-    <!-- Section Title -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="📂 அனைத்துத் தொழில்கள் &amp; சேவைகள்"
-        android:textColor="#0288D1"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <!-- Button Row 1: Cooking & Tree Climbing -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnCooking"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="6dp"
-            android:backgroundTint="#FFFFFF"
-            android:text="🍲\nசமையல் சேவைகள்"
-            android:textColor="#0288D1"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnTreeClimbing"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_marginStart="6dp"
-            android:backgroundTint="#FFFFFF"
-            android:text="🌴\nமரம் ஏறும் தொழில்கள்"
-            android:textColor="#0288D1"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <!-- Button Row 2: Electrical & Construction -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btnElectrical"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="6dp"
-            android:backgroundTint="#FFFFFF"
-            android:text="⚡\nமின்சாரம் &amp; பிளம்பிங்"
-            android:textColor="#0288D1"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btnConstruction"
-            android:layout_width="0dp"
-            android:layout_height="100dp"
-            android:layout_weight="1"
-            android:layout_marginStart="6dp"
-            android:backgroundTint="#FFFFFF"
-            android:text="🧱\nகட்டிட வேலைகள்"
-            android:textColor="#0288D1"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-</LinearLayout>
-
+</ScrollView>
